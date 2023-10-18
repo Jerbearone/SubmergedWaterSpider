@@ -82,6 +82,25 @@
 
 }
 
+.path-selector-components {
+  background-color: #A8DADC;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2rem;
+  padding-right: .5rem;
+  padding-left: .5rem;
+  border-radius: .5rem;
+  align-items: center;
+}
+
+.path-selector-item {
+  background-color: white;
+  border-radius: .5rem;
+  padding: .2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;

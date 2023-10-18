@@ -1,9 +1,9 @@
 import FCSelector from "./FCSelector";
 
-export default function Home () {
+export default function Home ( {setBuildingName}) {
     return (
         <div>
-            <FCSelector></FCSelector>
+            <FCSelector setBuildingName={setBuildingName}></FCSelector>
         </div>
     )
 }
