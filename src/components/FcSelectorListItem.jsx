@@ -7,8 +7,7 @@ export default function FcSelectorListItem({buildingName, setSelectedBuilding, s
             setSelectedBuilding(buildingName);
             setBuildingWasSelected(true);
             setBuildingName(buildingName);
-            navigator('/selectpath')
-            
+            navigator('/selectpath') 
         }} className="fc-selector-list-item">{buildingName}</li>
     )
 }
