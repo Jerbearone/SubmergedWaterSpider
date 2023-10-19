@@ -7,6 +7,7 @@
   padding: 2rem;
   text-align: center;
   background-color: #F1FAEE;
+  color: black;
 }
 
 /*E63946	F1FAEE	A8DADC	457B9D	1D3557 */
@@ -66,20 +67,27 @@
 }
 
 .fc-selector-selections{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
   grid-column-start: 2;
   grid-column-end: 4;
-  background-color: white;
+  background-color: #A8DADC;
   font-size: x-large;
   border-radius: .5rem;
 }
 
 .fc-selector-list-item {
   border-radius: .2rem;
+  margin-top: .75rem;
+  margin-bottom: .75rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  background-color: white;
 }
 
 .fc-selector-list-item:hover {
   background-color: #62AEDC;
-
 }
 
 .path-selector-components {
@@ -99,6 +107,35 @@
   padding: .2rem;
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+.path-selector-item:hover {
+  background-color: #62AEDC;
+}
+
+/*This is for the main screen where most of the logic will be processed, containing the different box sizes*/
+.selected-path {
+  height: 40%;
+  background-color: #A8DADC;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: .2rem;
+  padding-right: .5rem;
+  padding-left: .5rem;
+  border-radius: .5rem;
+  align-items: center;
+}
+
+.path-four-five-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  column-gap: 1rem;
+}
+
+/*Contains styling for stations*/
+.stations{
+  background-color: #A8DADC;
+  border-radius: .5rem;
 }
 
 .dropdown {
