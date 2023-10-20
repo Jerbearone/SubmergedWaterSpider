@@ -134,8 +134,17 @@
 
 /*Contains styling for stations*/
 .stations{
+  height: 70vh;
+  overflow-y: auto;
   background-color: #A8DADC;
   border-radius: .5rem;
+}
+
+.single-box-size{
+  border-radius: .2rem;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  background-color: white;
 }
 
 .dropdown {
