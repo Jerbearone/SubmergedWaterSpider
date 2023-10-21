@@ -2,6 +2,7 @@ import SingleBoxSize from "./SingleBoxSize";
 import Stations from "./Stations";
 import { line4, line5 } from "../../util/station_functions";
 import { useState } from "react";
+import SingleBoxTotal from "./SingleBoxTotal";
 
 export default function Path4_5() {
     const [currentStations, setCurrentStations] = useState(line4())
@@ -20,6 +21,17 @@ export default function Path4_5() {
         <div className="selected-path">
             {items.map((item) => {
                 return <SingleBoxSize key={item} boxSize={item}></SingleBoxSize> 
+            })}
+        </div>
+        <h4 className="selected-path-totals-title">Totals:</h4>
+        
+        
+        <div className="selected-path-totals">
+            
+        
+        
+            {items.map((item) => {
+                return <SingleBoxTotal key={item + item} boxSize={item}></SingleBoxTotal>
             })}
         </div>
         

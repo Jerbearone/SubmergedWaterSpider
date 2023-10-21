@@ -115,7 +115,11 @@
 
 /*This is for the main screen where most of the logic will be processed, containing the different box sizes*/
 .selected-path {
-  height: 40%;
+  grid-row-start:1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  
   background-color: #A8DADC;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -128,23 +132,59 @@
 
 .path-four-five-container {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr .1fr  1fr ;
   column-gap: 1rem;
+  row-gap: .1rem;
 }
 
 /*Contains styling for stations*/
 .stations{
   height: 70vh;
+  grid-row-start: 1;
+  grid-row-end: 4;
   overflow-y: auto;
   background-color: #A8DADC;
   border-radius: .5rem;
 }
 
 .single-box-size{
+  padding-top: .5rem;
+  padding-bottom: .5rem;
   border-radius: .2rem;
   margin-left: .5rem;
   margin-right: .5rem;
   background-color: white;
+}
+
+.selected-path-totals-title{
+  display: grid;
+  grid-column-start: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  z-index: 1;
+  height: .5rem;
+}
+
+.single-box-size-total{
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  border-radius: .2rem;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  background-color: white;
+  color: #457B9D;
+
+}
+
+.selected-path-totals{
+  display: grid;
+  background-color: #A8DADC;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .dropdown {
