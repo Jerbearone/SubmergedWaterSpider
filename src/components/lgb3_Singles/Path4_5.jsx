@@ -11,6 +11,7 @@ export default function Path4_5({selectedPath}) {
     const [fiveObject, setFiveObject] = useState(lineFiveObject());
     const [totals, setTotals] = useState(createTotalsObject());
     const [items, setItems] = useState([10,20,30,60,80,93,130,140,153,170,176,179,220,296]);
+    const [updateStationBoxCount, setUpdateStationBoxCount] = useState({'boxcount':false});
 
     //TODO change function argument to take in any line selected..
     const updateObjectCount = (stationNumber, boxSize) => {
@@ -53,17 +54,21 @@ export default function Path4_5({selectedPath}) {
         return boxValue;
     }
 
+    //function to pass down to station box counts to make station number button toggle when clicked
+
     return (
     <div className="path-four-five-container">
         <div className="stations">
-            <Stations stations={currentLine} setCurrentStation={setCurrentStation} updateSelectedBoxesUI={updateSelectedBoxesUI}>
+            <Stations updateStationBoxCount={updateStationBoxCount} stations={currentLine} setCurrentStation={setCurrentStation} updateSelectedBoxesUI={updateSelectedBoxesUI}
+            currentStation={currentStation}>
 
             </Stations>
         </div>
         <div className="selected-path">
+            
             {items.map((item) => {
                 return <SingleBoxSize key={item} boxSize={item} stationNumber = {currentStation} updateObjectCount={updateObjectCount}
-                getBoxSizeValue={getBoxSizeValue}></SingleBoxSize> 
+                getBoxSizeValue={getBoxSizeValue} updateStationBoxCount={updateStationBoxCount} setUpdateStationBoxCount={setUpdateStationBoxCount}></SingleBoxSize> 
             })}
         </div>
         <h4 className="selected-path-totals-title">Totals:</h4>

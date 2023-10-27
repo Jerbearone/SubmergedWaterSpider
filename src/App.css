@@ -195,6 +195,18 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+.station-number-title{
+  display: flex;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: .2rem;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
