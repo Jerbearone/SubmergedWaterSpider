@@ -6,7 +6,6 @@ import PathSelection from './components/PathSelection'
 import SelectedPath from './components/SelectedPath'
 
 function App() {
-  const [count, setCount] = useState(0);
   const [buildingName, setBuildingName] = useState("");
   const [selectedPath, setSelectedPath] = useState([]);
 
